@@ -17,7 +17,7 @@
 	  <div class="row justify-content-center mt-5">
 		<div class="col-xl-8 col-lg-10">
 		  <form class="hero-search-form" action="" method="GET" id="searchForm">
-			<div class="input-group ps-sm-2">
+			<div id="Search" class="input-group ps-sm-2">
 			  <i class="las la-tag"></i>
 			  <input type="text" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none" required>
 			</div>
@@ -55,11 +55,13 @@
                 var selectedValue = $(this).val();
                     console.log(selectedValue);
                 if(selectedValue == "Url"){
+                    $("#Search").hide();
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         window.location.href = "/items/";
                     });
                 }else{
+                    $("#Search").show();
                     'use strict';
                     $('#searchForm').on('submit',function(e){
                         e.preventDefault();
