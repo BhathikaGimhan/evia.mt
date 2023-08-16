@@ -24,6 +24,7 @@
 			<div class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
 			  <select class="select" id="mySelect" name="division">
+                <option value="Url">@lang('--Select--')</option>
                 <option value="Url">@lang('All Ads')</option>
 				  @foreach ($divisions as $div)
 				    <option value="{{$div->slug}}">{{$div->name}}</option>
@@ -54,7 +55,7 @@
                 var selectedValue = $(this).val();
                     console.log(selectedValue);
                 if(selectedValue == "Url"){
-                    $("searchForm").on('submit',function(e){
+                    $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         window.location.href = "/items/";
                     });
