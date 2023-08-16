@@ -27,7 +27,7 @@
                  <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
                </label>
                <input type="file"  name="prev_image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
-               <p>thumbnail image</p>
+               <code>thumbnail image</code>
              </div>
            </div>
          </div><!-- single-upload end -->
