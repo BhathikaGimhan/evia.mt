@@ -12,7 +12,7 @@
         </div>
      </div>
       <div class="row">
-        <label class="mb-3 font-weight-bold">@lang('Item Images')</label>
+        <label class="mb-3 font-weight-bold">@lang('you need to upload at least 03 images')</label>
         <div class="product-image-upload-container mb-2 d-flex justify-content-center">
           <div class="single-upload">
             <div class="center" >
