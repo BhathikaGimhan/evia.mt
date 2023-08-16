@@ -19,7 +19,7 @@
 		  <form class="hero-search-form" action="" method="GET" id="searchForm">
 			<div id="Search" class="input-group ps-sm-2">
 			  <i class="las la-tag"></i>
-			  <input type="text"id="Search" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
+			  <input type="text"id="SearchVal" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
 			</div>
 			<div id="optionCheck" class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
@@ -57,7 +57,7 @@
                 if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
-                        var data = $("#Search").val();
+                        var data = $("#SearchVal").val();
                         window.location.href = '/items/all?category='+data;
                     });
                 }else{
