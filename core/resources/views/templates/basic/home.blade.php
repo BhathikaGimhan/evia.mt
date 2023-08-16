@@ -24,6 +24,7 @@
 			<div class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
 			  <select class="select" id="mySelect" name="division">
+                <option value="Url">@lang('All Ads')</option>
 				  @foreach ($divisions as $div)
 				    <option value="{{$div->slug}}">{{$div->name}}</option>
 				  @endforeach
