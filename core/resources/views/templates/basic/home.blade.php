@@ -52,7 +52,10 @@
                 // Get the selected option value
                 var selectedValue = $(this).val();
                 if(selectedValue == "Url"){
-
+                    $("searchForm").on('submit',function(e){
+                        e.preventDefault();
+                        window.location.href = "/items/";
+                    });
                 }else{
                     'use strict';
                     $('#searchForm').on('submit',function(e){
