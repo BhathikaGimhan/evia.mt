@@ -23,9 +23,11 @@
              <div class="form-input">
                <label for="file-ip-1" data-toggle="tooltip" title="@lang('Preview image')">
                  <img id="file-ip-1-preview" src="{{getImage('assets/images/default.png')}}">
+
                  <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
                </label>
                <input type="file"  name="prev_image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+               <p>thumbnail image</p>
              </div>
            </div>
          </div><!-- single-upload end -->
