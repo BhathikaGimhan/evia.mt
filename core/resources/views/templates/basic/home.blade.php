@@ -21,7 +21,7 @@
 			  <i class="las la-tag"></i>
 			  <input type="text" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
 			</div>
-			<div class="input-group ps-sm-3">
+			<div id="optionCheck" class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
 			  <select class="select" id="mySelect" name="division">
                 <option value="Url">@lang('--Select--')</option>
@@ -56,11 +56,15 @@
                     console.log(selectedValue);
                 if(selectedValue == "Url"){
                     $("#Search").hide();
+                    $("#optionCheck").removeClass("ps-sm-3");
+                    $("#optionCheck").addClass("ps-sm-5");
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         window.location.href = "/items/";
                     });
                 }else{
+                    $("#optionCheck").removeClass("ps-sm-5");
+                    $("#optionCheck").addClass("ps-sm-3");
                     $("#Search").show();
                     'use strict';
                     $('#searchForm').on('submit',function(e){
