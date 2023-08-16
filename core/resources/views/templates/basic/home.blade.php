@@ -41,24 +41,40 @@
 		$searchUrl =  http_build_query(request()->except('search'));
 		$searchUrl =   str_replace("amp%3B","",$searchUrl);
 		$queryStrings = json_encode(request()->query());
+
 	@endphp
 	@push('script')
 	<script>
-		'use strict';
-		$('#searchForm').on('submit',function(e){
-			e.preventDefault();
-			var data = $(this).serialize();
-			var url = '{{url()->current()}}'+'/items/all'+'?{{$searchUrl}}';
-			url = url.replaceAll('amp;','');
-			var queryString = "{{$queryStrings}}"
-			var delim;
-			if(queryString.length > 2){
-			delim = "&"
-			}else {
-			delim = ""
-			}
-			window.location.href = url+delim+data;
-		});
+
+        $(document).ready(function() {
+            // Attach a change event handler to the select element
+            $("#mySelect").change(function() {
+                // Get the selected option value
+                var selectedValue = $(this).val();
+                if(selectedValue == "Url"){
+
+                }else{
+                    'use strict';
+                    $('#searchForm').on('submit',function(e){
+                        e.preventDefault();
+
+                        var data = $(this).serialize();
+                        var url = '{{url()->current()}}'+'/items/all'+'?{{$searchUrl}}';
+                        url = url.replaceAll('amp;','');
+                        var queryString = "{{$queryStrings}}"
+                        var delim;
+                        if(queryString.length > 2){
+                            delim = "&"
+                        }else {
+                            delim = ""
+                        }
+                        window.location.href = url+delim+data;
+                    });
+                }
+            });
+        });
+
+
 	</script>
 	@endpush
 
