@@ -3,10 +3,10 @@
 <div class="create-ad-wrapper">
     <form action="{{route('user.ad.update',$ad->id)}}" method="POST" enctype="multipart/form-data">
       @csrf
-    
+
      <div class="d-flex justify-content-between title">
        <h4 class="">@lang('Ad Information')</h4>
-        <div class=""> 
+        <div class="">
           <small class="font-weight-bold h6"> <i class="las la-tag text--base"></i> {{$ad->subcategory->name}}</small>
           <small class="font-weight-bold h6"> <i class="las la-map-marker text--base"></i> {{$ad->district}}</small>
         </div>
@@ -22,6 +22,7 @@
                   <button type="button" class="imgRemove" onclick="myImgRemove(0)"></button>
                 </label>
                 <input type="file"  name="prev_image" id="file-ip-0" accept="image/*" onchange="showPreview(event, 0);">
+                <code style="font-size: 9px;"> thumbnail image</code>
               </div>
             </div>
           </div>
@@ -56,16 +57,16 @@
             </div>
           </div>
           @endfor
-         
+
         </div>
-   
-      
-  
+
+
+
         <div class="col-lg-12 form-group">
           <label>@lang('Title')</label>
           <input type="text" name="title" placeholder="@lang('Enter title')" class="form--control" required value="{{$ad->title}}">
         </div>
-        
+
         <div class="col-md-12 form-group">
           <label>@lang('Condition')</label>
           <select class="form--control" name="condition" required>
@@ -73,12 +74,12 @@
             <option value="1" {{$ad->use_condition == 1?'selected':''}}>@lang('New')</option>
           </select>
         </div>
-       
+
         <div class="col-lg-12 form-group">
           <label>@lang('Description')</label>
           <textarea name="description" placeholder="Description" class="form--control nicEdit" required >{{$ad->description}}</textarea>
         </div>
-        
+
         @if($ad->subcategory->fields->count() > 0)
            @foreach($ad->subcategory->fields as $k => $field)
               @if ($field->type == 1 || $field->type == 4 )
@@ -104,7 +105,7 @@
                           <label class="font-weight-bold">@lang($field->label) <small>({{$field->required != 1 ? 'Optional':'At least 1 field is required'}})</small></label>
                           <div class="row">
                             @foreach ($field->options as $opt)
-                           
+
                             <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
                               <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="" name="{{$field->name}}[]" id="customCheck{{$loop->iteration}}"  {{ !empty($adFields[$field->name]) && in_array($opt,$adFields[$field->name])?'checked':''}} value="{{$opt}}">
@@ -118,7 +119,7 @@
               @endif
           @endforeach
         @endif
-        
+
 
        <div class="col-md-12 form-group">
           <label>@lang('Pice')</label>
@@ -131,11 +132,11 @@
                 "  {{$ad->negotiable == 1?'checked':''}}>
                 <label class="custom-control-label" for="customCheck101">@lang('Negotiable')</label>
               </div>
-      
+
             </span>
           </div>
         </div>
-        
+
       </div><!-- row end -->
 
       <h4 class="title mt-4">@lang('Contact Details')</h4>
@@ -150,7 +151,7 @@
         </div>
         <div class="col-md-12 form-group">
           <label>@lang('Phone Number')</label>
-        
+
           <div class="input-group">
             <span class="input-group-text d-flex align-items-center">
               <div class="custom-control custom-checkbox">
@@ -183,7 +184,7 @@
                   let preview = document.getElementById("file-ip-"+number+"-preview");
                   preview.src = src;
                   preview.style.display = "block";
-                } 
+                }
               }
               var myImgRemove =  function myImgRemove(number) {
                   document.getElementById("file-ip-"+number+"-preview").src = "{{getImage('assets/images/default.png')}}";
