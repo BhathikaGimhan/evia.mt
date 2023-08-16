@@ -6,7 +6,28 @@
         <div class="container">
           <div class="item-search-wrapper">
             <div class="row gy-3">
-
+              <div class="col-lg-3 col-md-6">
+                <button type="button" class="item-search-btn w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#locationModal"><i class="las la-map-marker"></i>
+                  @if ($distrct)
+                      {{$distrct->name}}
+                  @elseif(request()->input('division'))
+                      {{ucwords(request()->input('division'))}}
+                  @else
+                    @lang('Select Location')
+                  @endif
+                </button>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <button type="button" class="item-search-btn w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#categoryModal"><i class="las la-tag"></i>
+                  @if ($subcategory)
+                    {{$subcategory->name}}
+                  @elseif(request()->input('category'))
+                      {{ucwords(request()->input('category'))}}
+                  @else
+                    @lang('Select Category')
+                  @endif
+                </button>
+              </div>
               <div class="col-lg-6">
                 <form class="item-search-form" method="GET" action="" id="searchForm">
                   <input type="text" name="search" id="search" class="form--control" placeholder="@lang('Search in here')...">
