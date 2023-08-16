@@ -1,0 +1,205 @@
+[21-Jul-2023 17:09:31 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "view" does not exist in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): ReflectionClass->__construct()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#15 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#17 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [view] does not exist. in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:875
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#16 {main}
+  thrown in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 875
+[21-Jul-2023 17:09:33 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "view" does not exist in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): ReflectionClass->__construct()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#15 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#17 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [view] does not exist. in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:875
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#16 {main}
+  thrown in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 875
+[21-Jul-2023 17:09:34 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "view" does not exist in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): ReflectionClass->__construct()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#15 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#17 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [view] does not exist. in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:875
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#16 {main}
+  thrown in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 875
+[21-Jul-2023 17:11:01 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "view" does not exist in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): ReflectionClass->__construct()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#15 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#17 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [view] does not exist. in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:875
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#16 {main}
+  thrown in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 875
+[21-Jul-2023 17:11:28 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "view" does not exist in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(873): ReflectionClass->__construct()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#15 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#17 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [view] does not exist. in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:875
+Stack trace:
+#0 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\Container\Container->build()
+#1 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve()
+#2 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(692): Illuminate\Foundation\Application->resolve()
+#3 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make()
+#4 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(1419): Illuminate\Foundation\Application->make()
+#5 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(198): Illuminate\Container\Container->offsetGet()
+#6 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance()
+#7 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#8 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(18): Illuminate\Support\Facades\Facade::__callStatic()
+#9 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(586): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#10 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(567): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#11 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(478): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#12 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#13 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render()
+#14 /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#16 {main}
+  thrown in /home/randcopf/demo.randika.pw/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 875

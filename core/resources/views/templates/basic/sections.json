@@ -1,0 +1,194 @@
+{
+    "banner": {
+        "builder": true,
+        "no_selection":true,
+        "name": "Banner Section",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size":"1920x1080"
+                    
+                }
+            },
+            "title": "text",
+            "heading": "text",
+            "sub_heading": "text",
+            "popular_keyword": "text"
+        }
+    },
+    "category": {
+        "builder": true,
+        "name": "Category Section",
+        "content": {
+            "heading": "text"
+        }
+       
+    },
+    "featuredAds": {
+        "builder": true,
+        "name": "Featured Ad Section",
+        "content": {
+            "heading": "text"
+        }
+       
+    },
+    "location": {
+        "builder": true,
+        "name": "Location Section",
+        "content": {
+            "heading": "text"
+        }
+       
+    },
+
+    "cta": {
+        "builder": true,
+        "name": "Call To Action Section",
+        "content": {
+            "heading": "text",
+            "sub_heading": "text",
+            "button_text": "text",
+            "button_link": "text"
+        },
+        "element": {
+            "images":{
+                "icon_image":{
+                    "size":"512x512"
+                    
+                }
+            },
+            "title": "text",
+            "short_details": "textarea",
+            "modal": true
+        }
+    },
+    "how": {
+        "builder": true,
+        "name": "How it works",
+        "element": {
+            "icon":"icon",
+            "title": "text",
+            "modal": true
+        }
+    },
+    "counter": {
+        "builder": true,
+        "name": "Counter Section",
+        "element": {
+            "title": "text",
+            "digit": "text",
+            "modal": true
+        }
+    },
+
+    "login": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Login Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size":"1080x709"
+                    
+                }
+            },
+            "heading":"text",
+            "instruction_title":"text",
+            "instruction_details":"textarea"
+        
+        },
+        "element":{
+            "instruction":"text",
+            "modal":true
+        }
+    },
+    "signup": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Sign Up Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size":"1080x709"
+                    
+                }
+            },
+            "heading":"text",
+            "instruction_title":"text",
+            "instruction_details":"textarea"
+        
+        },
+        "element":{
+            "instruction":"text",
+            "modal":true
+        }
+    },
+
+   
+    "faq": {
+        "builder": true,
+        "name": "FAQ Section",
+        "element": {
+            "question": "text",
+            "answer": "textarea-nic",
+            "modal": false
+        }
+    },
+    "policy": {
+        "builder": true,
+        "name": "Privacy and Policy",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+   
+ 
+    "breadcrumb": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Breadcrumb Section",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size":"1920x788"
+                    
+                }
+            }
+
+        
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "title": "text",
+            "email_address": "text",
+            "address": "text",
+            "contact_number": "text",
+            "latitude": "text",
+            "longitude": "text",
+            "map_api": "text"
+        
+        }
+    },
+    "footer": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Footer Section",
+        "content": {
+            "short_details": "text",
+            "total_ad": "text",
+            "total_users": "text"
+        },
+        "element":{
+            "social_icon":"icon",
+            "link":"text",
+            "modal":true
+        }
+    }
+}
+ 
