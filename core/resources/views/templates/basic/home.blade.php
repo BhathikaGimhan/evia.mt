@@ -55,21 +55,12 @@
                 var selectedValue = $(this).val();
                     console.log(selectedValue);
                 if(selectedValue == "Url"){
-                    $("#Search").hide();
-                    $("#optionCheck").removeClass("ps-sm-3");
-                    $("#optionCheck").addClass("ps-sm-4");
-                    $("#Search").removeClass("ps-sm-2");
-                    $("#Search").addClass("ps-sm-0");
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
-                        window.location.href = "/items/";
+                        var data = $(this).serialize();
+                        window.location.href = "/items/all?category="+data;
                     });
                 }else{
-                    $("#optionCheck").removeClass("ps-sm-5");
-                    $("#optionCheck").addClass("ps-sm-3");
-                    $("#Search").removeClass("ps-sm-0");
-                    $("#Search").addClass("ps-sm-2");
-                    $("#Search").show();
                     'use strict';
                     $('#searchForm').on('submit',function(e){
                         e.preventDefault();
