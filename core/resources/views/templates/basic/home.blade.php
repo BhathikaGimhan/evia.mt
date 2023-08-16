@@ -57,7 +57,7 @@
                 if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
-                        var url = '{{url()->current()}}'+'/items/all'+'?{{$searchUrl}}';
+                        var url = '{{/items/all'+'?{{$searchUrl}}';
                         url = url.replaceAll('amp;','');
                         var data = $(this).serialize();
                         var queryString = "{{$queryStrings}}"
@@ -67,7 +67,7 @@
                         }else {
                             delim = ""
                         }
-                        window.location.href = url+delim+data;
+                        window.location.href = url+data;
                     });
                 }else{
                     'use strict';
