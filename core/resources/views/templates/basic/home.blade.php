@@ -31,7 +31,7 @@
 			</div>
 			<button type="submit" class="hero-search-form-btn"><i class="las la-search"></i> @lang('Search')</button>
 		  </form>
-		  <p class="text-white font-size--16px mt-3 text-center">hello</p>
+		  <p class="text-white font-size--16px mt-3 text-center">{{__($banner->popular_keyword)}}</p>
 		</div>
 	  </div>
 	</div>
