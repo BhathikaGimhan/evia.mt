@@ -59,15 +59,7 @@
                         e.preventDefault();
                         var url = '{{/items/all'+'?{{$searchUrl}}';
                         url = url.replaceAll('amp;','');
-                        var data = $(this).serialize();
-                        var queryString = "{{$queryStrings}}"
-                        var delim;
-                        if(queryString.length > 2){
-                            delim = "&"
-                        }else {
-                            delim = ""
-                        }
-                        window.location.href = url+data;
+                        window.location.href = url;
                     });
                 }else{
                     'use strict';
