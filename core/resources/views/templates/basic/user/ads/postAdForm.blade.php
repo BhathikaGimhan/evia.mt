@@ -25,9 +25,9 @@
                  <img id="file-ip-1-preview" src="{{getImage('assets/images/default.png')}}">
 
                  <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
-                 <code style="font-size: 10px;">thumbnail image</code>
                </label>
                <input type="file"  name="prev_image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+               <code style="font-size: 10px;">thumbnail image</code>
              </div>
            </div>
          </div><!-- single-upload end -->
