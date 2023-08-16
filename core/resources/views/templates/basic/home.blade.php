@@ -52,8 +52,8 @@
             $("#mySelect").change(function() {
                 // Get the selected option value
                 var selectedValue = $(this).val();
+                    console.log(selectedValue);
                 if(selectedValue == "Url"){
-                    console.log("selectedValue");
                     $("searchForm").on('submit',function(e){
                         e.preventDefault();
                         window.location.href = "/items/";
