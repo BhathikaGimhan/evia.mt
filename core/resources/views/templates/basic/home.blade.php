@@ -57,9 +57,9 @@
                 if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
+                        var data = $(this).serialize();
                         var url = '{{/items/all'+'?{{$searchUrl}}';
-                        url = url.replaceAll('amp;','');
-                        window.location.href = url;
+                        window.location.href = '{{ url(/items/all?'+data') }}';
                     });
                 }else{
                     'use strict';
