@@ -24,8 +24,8 @@
 			<div id="optionCheck" class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
 			  <select class="select" id="mySelect" name="division">
-                <option value="Url">@lang('--Select--')</option>
-                <option value="Url">@lang('All Ads')</option>
+                <option>@lang('--Select--')</option>
+                <option value="all">@lang('All Ads')</option>
 				  @foreach ($divisions as $div)
 				    <option value="{{$div->slug}}">{{$div->name}}</option>
 				  @endforeach
@@ -54,11 +54,20 @@
                 // Get the selected option value
                 var selectedValue = $(this).val();
                     console.log(selectedValue);
-                if(selectedValue == "Url"){
+                if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
+                        var url = '{{url()->current()}}'+'/items/all'+'?{{$searchUrl}}';
+                        url = url.replaceAll('amp;','');
                         var data = $(this).serialize();
-                        window.location.href = "/items/all?category="+data;
+                        var queryString = "{{$queryStrings}}"
+                        var delim;
+                        if(queryString.length > 2){
+                            delim = "&"
+                        }else {
+                            delim = ""
+                        }
+                        window.location.href = url+delim+data;
                     });
                 }else{
                     'use strict';
