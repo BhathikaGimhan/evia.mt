@@ -19,7 +19,7 @@
 		  <form class="hero-search-form" action="" method="GET" id="searchForm">
 			<div id="Search" class="input-group ps-sm-2">
 			  <i class="las la-tag"></i>
-			  <input type="text" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
+			  <input type="text"id="Search" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
 			</div>
 			<div id="optionCheck" class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
@@ -52,13 +52,13 @@
             // Attach a change event handler to the select element
             $("#mySelect").change(function() {
                 // Get the selected option value
-                var selectedValue = $(this).serialize();
+                var selectedValue = $(this).val();
                     console.log(selectedValue);
                 if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
-                        var data = $(this).serialize();
-                        window.location.href = '/items/all?'+data;
+                        var data = $("#Search").val();
+                        window.location.href = '/items/all?category='+data;
                     });
                 }else{
                     'use strict';
