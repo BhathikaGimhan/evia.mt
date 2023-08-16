@@ -19,7 +19,7 @@
 		  <form class="hero-search-form" action="" method="GET" id="searchForm">
 			<div id="Search" class="input-group ps-sm-2">
 			  <i class="las la-tag"></i>
-			  <input type="text" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none" required>
+			  <input type="text" name="search" placeholder="@lang('Enter keyword, title')" autocomplete="off" class="form--control border-none">
 			</div>
 			<div class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
