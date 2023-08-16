@@ -25,7 +25,7 @@
 			  <i class="las la-map-marker"></i>
 			  <select class="select" id="mySelect" name="division">
                 <option>@lang('--Select--')</option>
-                <option value="all">@lang('All Ads')</option>
+                <option value="all">@lang('All Of Malta')</option>
 				  @foreach ($divisions as $div)
 				    <option value="{{$div->slug}}">{{$div->name}}</option>
 				  @endforeach
