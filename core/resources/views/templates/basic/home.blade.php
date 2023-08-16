@@ -52,7 +52,7 @@
             // Attach a change event handler to the select element
             $("#mySelect").change(function() {
                 // Get the selected option value
-                var selectedValue = $(this).val();
+                var selectedValue = $(this).serialize();
                     console.log(selectedValue);
                 if(selectedValue == "all"){
                     $("#searchForm").on('submit',function(e){
