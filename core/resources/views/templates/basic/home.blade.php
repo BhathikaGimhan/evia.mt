@@ -23,7 +23,7 @@
 			</div>
 			<div class="input-group ps-sm-3">
 			  <i class="las la-map-marker"></i>
-			  <select class="select" name="division">
+			  <select class="select" id="mySelect" name="division">
 				  @foreach ($divisions as $div)
 				    <option value="{{$div->slug}}">{{$div->name}}</option>
 				  @endforeach
