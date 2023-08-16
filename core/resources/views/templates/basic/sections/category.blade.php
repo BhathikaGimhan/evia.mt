@@ -1,6 +1,6 @@
 @php
     $content = getContent('category.content',true)->data_values;
-    $categories = \App\Models\Category::where('status',1)->inRandomOrder()->take(8)->get();
+    $categories = \App\Models\Category::where('status',1)->inRandomOrder()->get();
 @endphp
 
     <!-- category section start -->
@@ -27,7 +27,7 @@
                           </div>
                         </div><!-- category-item end -->
                       </div>
-                    
+
                   @endforeach
                 </div>
               </div>
