@@ -58,7 +58,7 @@
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         var data = $(this).serialize();
-                        window.location.href = '{{ url(/items/all?'+data') }}';
+                        window.location.href = '/items/all?'+data;
                     });
                 }else{
                     'use strict';
