@@ -98,11 +98,11 @@ class AdManageController extends Controller
     {
         $page_title = "Edit Ad";
         $ad = AdList::findOrFail($id);
-        $adFields = json_decode(json_encode($ad->fields),true); 
+        $adFields = json_decode(json_encode($ad->fields),true);
         return view("admin.ads.editAd",compact("page_title","ad","adFields"));
     }
 
-    
+
     public function updateAd(Request $request,$id)
     {
         $images = $request->image;
@@ -114,7 +114,7 @@ class AdManageController extends Controller
             'price' => 'required|numeric|gt:0',
             'phone' => 'required',
             'prev_image'=>['image','max:2048',new FileTypeValidate(['jpg','jpeg','png'])],
-            
+
         ];
 
         if($images != null){
@@ -146,7 +146,7 @@ class AdManageController extends Controller
                 }
             }
         }
-      
+
         $request->validate($rules,['prev_image.required'=>'Preview Image is required','prev_image.image'=>'Preview Image has to be image type','prev_image.mimes'=>'Preview Image is allowed to be jpg,jped,png']);
 
         $extraFields = [];
@@ -155,8 +155,8 @@ class AdManageController extends Controller
             if ($request["$fieldName"]) {
             $extraFields["$fieldName"] = $request["$fieldName"];
             }
-        } 
-        
+        }
+
         $ad->title = $request->title;
         $ad->use_condition = $request->condition;
         $ad->description = $request->description;
@@ -178,10 +178,10 @@ class AdManageController extends Controller
                 $img->update();
             }
         }
-        
+
         $notify[]=['success','Ad updated successfully'];
         return back()->withNotify($notify);
-   
+
    }
 
    public function adReports(Request $request)
@@ -219,7 +219,7 @@ class AdManageController extends Controller
 
    public function advertisementStore(Request $request)
    {
-    
+
         $request->validate([
             'type' => 'required|in:1,2',
             'size' => 'required|in:300x250,300x600,970x90',
@@ -242,11 +242,12 @@ class AdManageController extends Controller
             }
             $advr->ad_image = uploadImage($request->adimage,'assets/images/commercial/');
         }
-        $advr->status = $request->status ? 1:0;
+        // $advr->status = $request->status ? 1:0;
+        $advr->status = 1;
         $advr->save();
         $notify[]=['success','Advertisement added successfully'];
         return back()->withNotify($notify);
-       
+
    }
 
    public function advertisementUpdate(Request $request,$id)
@@ -304,8 +305,8 @@ class AdManageController extends Controller
         $empty_message = "No ads found";
         return view('admin.ads.allAds',compact('page_title','ads','search','empty_message'));
    }
-   
-   
-   
-   
+
+
+
+
 }
