@@ -58,7 +58,6 @@
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         var data = $(this).serialize();
-                        var url = '{{/items/all'+'?{{$searchUrl}}';
                         window.location.href = '{{ url(/items/all?'+data') }}';
                     });
                 }else{
