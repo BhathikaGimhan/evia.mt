@@ -163,6 +163,7 @@ class AdManageController extends Controller
         $ad->price = $request->price;
         $ad->negotiable = $request->negotiable ? 1:0;
         $ad->contact_num = $request->phone;
+        $ad->status = 1; //meka aluthen dapu eka
         $ad->hide_contact = $request->hidenumber ? 1:0;
         $ad->fields = json_decode(json_encode($extraFields))??[];
         if($request->prev_image){
@@ -242,7 +243,7 @@ class AdManageController extends Controller
             }
             $advr->ad_image = uploadImage($request->adimage,'assets/images/commercial/');
         }
-        // $advr->status = $request->status ? 1:0;
+        // $advr->status = $request->status ? 1:0; yata eka edit karapu eka
         $advr->status = 1;
         $advr->save();
         $notify[]=['success','Advertisement added successfully'];
