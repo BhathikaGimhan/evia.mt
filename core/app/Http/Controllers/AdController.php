@@ -146,7 +146,7 @@ class AdController extends Controller
            $ad->negotiable = $request->negotiable ? 1:0;
            $ad->ownership = $request->Ownership;
            $ad->contact_num = $request->phone;
-           $ad->status = 1; //meka wenas kala
+           $ad->status = 1; //auto approval meka wenas kala
            $ad->hide_contact = $request->hidenumber ? 1:0;
            $ad->fields = json_decode(json_encode($extraFields))??[];
            if($request->prev_image){
@@ -262,7 +262,7 @@ class AdController extends Controller
         $ad->price = $request->price;
         $ad->negotiable = $request->negotiable ? 1:0;
         $ad->contact_num = $request->phone;
-        $ad->status = 1; //meka wenas kala
+        $ad->status = 1; //auto approval meka wenas kala
         $ad->hide_contact = $request->hidenumber ? 1:0;
         $ad->fields = json_decode(json_encode($extraFields))??[];
 
