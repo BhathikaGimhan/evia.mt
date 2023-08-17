@@ -17,11 +17,13 @@
                 <span>{{$division->name}}</span>
 
               </a>
-              <a href="{{queryBuild('location',$division->slug)}}">
-                <i class="las la-map-marker"></i>
-                <span>{{__($division->name)}}</span>
-              </a>
               <ul class="drop-menu">
+                <li>
+                    <a href="{{queryBuild('location',$division->slug)}}">
+                        <i class="las la-map-marker"></i>
+                        <span>{{__("all of, ", $division->name)}}</span>
+                      </a>
+                </li>
                   @foreach ($division->districts as $district)
 
                   <li>
@@ -96,3 +98,62 @@
     </div>
   </div>
  @endif
+
+ @php
+		$searchUrl =  http_build_query(request()->except('search'));
+		$searchUrl =   str_replace("amp%3B","",$searchUrl);
+		$queryStrings = json_encode(request()->query());
+
+	@endphp
+	@push('script')
+	<script>
+
+        $(document).ready(function() {
+            $(".hero-search-form-btn").prop('disabled', true);
+            // Attach a change event handler to the select element
+            $("#mySelect").change(function() {
+                // Get the selected option value
+                var selectedValue = $(this).val();
+                    console.log(selectedValue);
+                if(selectedValue == "all"){
+                    $(".hero-search-form-btn").prop('disabled', false);
+                    $("#searchForm").on('submit',function(e){
+                        e.preventDefault();
+                        var data = $("#SearchVal").val();
+                        window.location.href = '/items/all?search='+data;
+                    });
+                }else if(selectedValue == "--Select--"){
+                    $(".hero-search-form-btn").prop('disabled', true);
+                }
+                else{
+                    $(".hero-search-form-btn").prop('disabled', false);
+                    'use strict';
+                    $('#searchForm').on('submit',function(e){
+                        e.preventDefault();
+
+                        var data = $(this).serialize();
+                        var url = '{{url()->current()}}'+'/items/all'+'?{{$searchUrl}}';
+                        url = url.replaceAll('amp;','');
+                        var queryString = "{{$queryStrings}}"
+                        var delim;
+                        if(queryString.length > 2){
+                            delim = "&"
+                        }else {
+                            delim = ""
+                        }
+                        window.location.href = url+delim+data;
+                    });
+                }
+            });
+        });
+
+
+	</script>
+	@endpush
+
+    @if($sections->secs != null)
+        @foreach(json_decode($sections->secs) as $sec)
+            @include($activeTemplate.'sections.'.$sec)
+        @endforeach
+    @endif
+@endsection
