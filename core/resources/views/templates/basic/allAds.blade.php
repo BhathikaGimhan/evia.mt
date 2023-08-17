@@ -250,7 +250,11 @@
                       <ul>
                         <li>
                             <span style="background-color: #43CED2; border-radius:10px; padding:8px; color:white;">{{$ad->ownership}}</span>
-                          </li>
+                        </li>
+                        <li>
+                            <span style="background-color: #d8cd6d; border-radius:10px; padding:8px; color:white;">{{$ad->use_condition}}</span>
+                        </li>
+
                       </ul>
                     </div>
                     <div class="list-item__footer">
