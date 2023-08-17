@@ -55,12 +55,17 @@
                 var selectedValue = $(this).val();
                     console.log(selectedValue);
                 if(selectedValue == "all"){
+                    $(".hero-search-form-btn").prop('disabled', false);
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         var data = $("#SearchVal").val();
                         window.location.href = '/items/all?category='+data;
                     });
-                }else{
+                }else if(selectedValue == "--Select--"){
+                    $(".hero-search-form-btn").prop('disabled', true);
+                }
+                else{
+                    $(".hero-search-form-btn").prop('disabled', false);
                     'use strict';
                     $('#searchForm').on('submit',function(e){
                         e.preventDefault();
