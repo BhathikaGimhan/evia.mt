@@ -17,7 +17,7 @@
                 <span>{{$division->name}}</span>
 
               </a>
-              <p>{{$div->slug}}</p>
+              <p>{{$division->slug}}</p>
               <ul class="drop-menu">
                   @foreach ($division->districts as $district)
 
