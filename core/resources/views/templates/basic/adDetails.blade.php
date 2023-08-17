@@ -58,19 +58,24 @@
                     @endforeach
                 </div><!-- ad-details-nav-slider end -->
               </div>
-             
+
               <div class="ad-details-content">
                 <h4>@lang('Ad Overview')</h4>
                 <ul class="caption-list-two mt-3">
                   <li>
                     <span class="caption">@lang('Condition')</span>
+
+                    @if ($ad->subcategory->category_id == 8)
+                    <span class="value">{{$ad->use_condition == 2 ? 'Full Time':'Part Time'}}</span>
+                    @else
                     <span class="value">{{$ad->use_condition == 1 ? 'New':'Used'}}</span>
+                    @endif
                   </li>
                   <li>
                     <span class="caption">@lang('Type')</span>
                     <span class="value">{{$ad->type == 1 ? 'Sell':'Rent'}}</span>
                   </li>
-                 
+
                   @foreach ($fields as $key => $field)
                     @if(is_array($field))
                        <li>
@@ -87,10 +92,10 @@
                             <span class="value">{{$field}}</span>
                         </li>
                     @endif
-                    
+
                   @endforeach
                 </ul>
-             
+
 
                 <h4 class="mt-5">@lang('Description')</h4>
                 <p class="mt-2">
@@ -101,7 +106,7 @@
                 <hr>
 
               </div>
-            
+
               <button class="ad-details-show-btn mt-3">
                 <span class="text-one">@lang('Show Details')</span>
                 <span class="text-two">@lang('Show Less')</span>
@@ -144,7 +149,7 @@
                @empty
                 <h6 class="mt-5">@lang('No Related Ads')</h6>
               @endforelse
-             
+
             </div>
             @endif
           </div>
@@ -193,7 +198,7 @@
                       </div>
                     </li>
                     <li class="has--link">
-                      
+
                       <div class="icon">
                         <i class="las la-phone-volume"></i>
                       </div>
@@ -211,22 +216,22 @@
                       </div>
                       @endif
                     </li>
-                    
+
                   </ul>
                 </div>
               </div>
-              
 
-           
+
+
 
               <div class="ad-details-widget mt-4">
                 <h6 class="ad-details-widget__title"><i class="las la-external-link-alt"></i> @lang('Share')</h6>
                 <div class="ad-details-widget__body">
                     <ul class="post__share">
                       <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{urlencode(url()->current()) }}"><i class="lab la-facebook-f"></i></a></li>
-                   
+
                       <li><a target="_blank" href="http://pinterest.com/pin/create/button/?url={{urlencode(url()->current()) }}&description={{ __($ad->title) }}&media={{ getImage('assets/images/item_image/'.$ad->prev_image) }}"><i class="lab la-pinterest"></i></a></li>
-                     
+
                       <li><a target="_blank" href="https://twitter.com/intent/tweet?text=my share text&amp;url={{urlencode(url()->current()) }}"><i class="lab la-twitter"></i></a></li>
                     </ul>
                 </div>
@@ -245,7 +250,7 @@
               @else
                 <a href="{{route('user.promote.ad.packages',$ad->slug)}}" class="btn btn-md btn--primary w-100"><i class="las la-bullhorn"></i> @lang('Promote this ad')</a>
               @endif
-                
+
               </div>
 
               @auth
@@ -298,34 +303,34 @@
 
 <script>
   'use strict';
-    $('.show').on('click',function () { 
+    $('.show').on('click',function () {
         $(this).addClass('d-none')
         $('.hide').removeClass('d-none')
         $('.hide-value').removeClass('d-none')
     })
 
-    $('.save').on('click',function () { 
+    $('.save').on('click',function () {
         var userid = $(this).data('userid')
         var adId = $(this).data('adid')
-       
+
         var data = {
           userid:userid,
           adId:adId
         }
         var route = "{{route('user.save.ad')}}"
-        axios.post(route,data).then(function (res) { 
+        axios.post(route,data).then(function (res) {
           if(res.data.adId ||res.data.userid)
           {
-            $.each(res.data, function (i, val) { 
+            $.each(res.data, function (i, val) {
                notify('error',val)
             });
           } else{
             notify('success',res.data.success)
           }
-          
+
         })
      })
-    $('.advert').on('click',function () { 
+    $('.advert').on('click',function () {
         var ad_id = $(this).data('advertid')
         var data = {
           ad_id:ad_id

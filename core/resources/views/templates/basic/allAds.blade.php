@@ -64,8 +64,14 @@
                     <span class="mb-2">@lang('Condition')</span>
                     <select class="select" name="condition" onChange = 'window.location.href=this.value'>
                       <option value="">@lang('Choose Option')</option>
-                      <option value="{{queryBuild('condition',2)}}" {{request()->input('condition') == 2?'selected':''}}>@lang('Used')</option>
+                      @if ($subcategory->category_id == 8)
+                      <option value="{{queryBuild('condition',3)}}" {{request()->input('condition') == 3?'selected':''}}>@lang('Full Time')</option>
+                      <option value="{{queryBuild('condition',4)}}" {{request()->input('condition')==4?'selected':''}} >@lang('Part Time')</option>
+                        @else
+                        <option value="{{queryBuild('condition',2)}}" {{request()->input('condition') == 2?'selected':''}}>@lang('Used')</option>
                       <option value="{{queryBuild('condition',1)}}" {{request()->input('condition')==1?'selected':''}} >@lang('New')</option>
+                        @endif
+
                     </select>
                   </div>
                 @endif
