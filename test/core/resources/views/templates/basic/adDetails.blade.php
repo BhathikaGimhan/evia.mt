@@ -66,7 +66,12 @@
                     <span class="caption">@lang('Condition')</span>
 
                     @if ($ad->subcategory->category_id == 8)
-                    <span class="value">{{$ad->use_condition == 2 ? 'Full Time':'Part Time'}}</span>
+                        @if ($ad->use_condition == 2)
+                        <span class="value">Full Time</span>
+
+                        @else
+                        <span class="value">Part Time</span>
+                        @endif
                     @else
                     <span class="value">{{$ad->use_condition == 1 ? 'New':'Used'}}</span>
                     @endif
