@@ -60,7 +60,7 @@
                     $("#searchForm").on('submit',function(e){
                         e.preventDefault();
                         var data = $("#SearchVal").val();
-                        window.location.href = '/items/all?category='+data;
+                        window.location.href = '/items/all?search='+data;
                     });
                 }else if(selectedValue == "--Select--"){
                     $(".hero-search-form-btn").prop('disabled', true);
