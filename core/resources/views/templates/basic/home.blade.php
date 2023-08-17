@@ -49,6 +49,7 @@
 	<script>
 
         $(document).ready(function() {
+            $(".hero-search-form-btn").prop('disabled', true);
             // Attach a change event handler to the select element
             $("#mySelect").change(function() {
                 // Get the selected option value
