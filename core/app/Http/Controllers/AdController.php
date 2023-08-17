@@ -79,7 +79,7 @@ class AdController extends Controller
             $allowedExts = array('jpg','jpeg','png');
             $rules = [
                 'title' => 'required',
-                'condition' => 'required|in:1,2',
+                'condition' => 'required|in:1,2,3,4',
                 'description' => 'required',
                 'price' => 'required|numeric|gt:0',
                 'phone' => 'required',
@@ -204,7 +204,7 @@ class AdController extends Controller
         $allowedExts = array('jpg','jpeg','png');
         $rules = [
             'title' => 'required',
-            'condition' => 'required|in:1,2',
+            'condition' => 'required|in:1,2,3,4',
             'description' => 'required',
             'price' => 'required|numeric|gt:0',
             'phone' => 'required',
