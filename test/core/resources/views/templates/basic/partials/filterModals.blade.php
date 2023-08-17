@@ -19,12 +19,12 @@
               </a>
 
               <ul class="drop-menu">
-                <li>
+                {{-- <li>
                     <a href="{{queryBuild('location',$division->slug)}}">
                         <i class="las la-map-marker"></i>
                         <span>{{__("all of, ", $division->name)}}</span>
                       </a>
-                </li>
+                </li> --}}
                   @foreach ($division->districts as $district)
 
                   <li>
