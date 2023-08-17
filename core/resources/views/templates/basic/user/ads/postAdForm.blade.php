@@ -27,7 +27,7 @@
                  <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
                </label>
                <input type="file"  name="prev_image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
-               <code style="font-size: 9px;"> </code>
+               <code style="font-size: 9px;"> thumbnail image</code>
              </div>
            </div>
          </div><!-- single-upload end -->
@@ -88,8 +88,13 @@
         <div class="col-md-12 form-group">
           <label>@lang('Condition')</label>
           <select class="form--control" name="condition" required>
+            @if ($subcategory->name == 8)
+            <option value="3">@lang('Full Time')</option>
+            <option value="4">@lang('Part Time')</option>
+            @else
             <option value="2">@lang('Used')</option>
             <option value="1">@lang('New')</option>
+            @endif
           </select>
         </div>
 
