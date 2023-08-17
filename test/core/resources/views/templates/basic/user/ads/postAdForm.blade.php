@@ -87,8 +87,14 @@
         <div class="col-md-12 form-group">
           <label>@lang('Condition')</label>
           <select class="form--control" name="condition" required>
-            <option value="2">@lang('Used')</option>
-            <option value="1">@lang('New')</option>
+            @if ($subcategory->category_id == 8)
+                <option value="3">@lang('Full Time')</option>
+                <option value="4">@lang('Part Time')</option>
+            @else
+                <option value="2">@lang('Used')</option>
+                <option value="1">@lang('New')</option>
+            @endif
+
           </select>
         </div>
 
