@@ -15,8 +15,9 @@
               <a href="javascript:void(0)">
                 <img src="{{getImage('assets/images/location/'.$division->image,'100x100')}}" alt="image" class="select-menu-img">
                 <span>{{$division->name}}</span>
-                <p>test test</p>
+
               </a>
+              <p>{{$div->slug}}</p>
               <ul class="drop-menu">
                   @foreach ($division->districts as $district)
 
