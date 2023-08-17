@@ -109,7 +109,7 @@
         //     e.preventDefault();
 
         // });
-        $(this).on('click', function (e) {
+        $('.selectAll').on('click', function (e) {
             e.preventDefault();
             console.log('ok');
         });
