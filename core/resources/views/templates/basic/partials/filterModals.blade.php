@@ -20,7 +20,7 @@
               <ul class="drop-menu" id="selectLocation">
                 <li>
                     <a class="selectAll"  style="color: #43ced2" href="all?division={{$division->slug}}">
-                        <i class="las la-map-marker"></i>
+                        <i class="las la-map-pin"></i>
                         <span>all of {{__( $division->name)}}</span>
                       </a>
                 </li>
