@@ -101,9 +101,10 @@
  @endif
  <script>
     $(document).ready(function () {
-        $('#selectLocation').change(function (e) {
+        $(this).on('click', function (e) {
             e.preventDefault();
             console.log('ok');
+        });
 
         });
     });

@@ -19,7 +19,7 @@
               </a>
               <ul class="drop-menu" id="selectLocation">
                 <li>
-                    <a href="{{queryBuild('location',$division->slug)}}">
+                    <a class="selectAll">
                         <i class="las la-map-marker"></i>
                         <span>all of {{__( $division->name)}}</span>
                       </a>
@@ -100,10 +100,18 @@
  @endif
 <script>
     $(document).ready(function () {
-        $('#selectLocation').change(function (e) {
+        // $('#selectLocation').change(function (e) {
+        //     e.preventDefault();
+        //     console.log('ok');
+
+        // });
+        // $(this).click(function (e) {
+        //     e.preventDefault();
+
+        // });
+        $(this).on('click', function (e) {
             e.preventDefault();
             console.log('ok');
-
         });
     });
 </script>
