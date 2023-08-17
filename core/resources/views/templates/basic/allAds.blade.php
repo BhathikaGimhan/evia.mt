@@ -250,9 +250,14 @@
                       <ul>
                         <li>
                             <span style="background-color: #43CED2; border-radius:10px; padding:8px; color:white;">{{$ad->ownership}}</span>
-                        </li>
-                        <li>
-                            <span style="background-color: #d8cd6d; border-radius:10px; padding:8px; color:white;">{{$ad->use_condition}}</span>
+                            @if ($ad->use_condition == 3)
+                            <span style="background-color: #7fd86d; border-radius:10px; padding:8px; color:white;">Full Time</span>
+                            @elseif($ad->use_condition == 4)
+                            <span style="background-color: #7fd86d; border-radius:10px; padding:8px; color:white;">Part Time</span>
+
+                            @else
+
+                            @endif
                         </li>
 
                       </ul>
