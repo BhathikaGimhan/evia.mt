@@ -70,7 +70,7 @@
         <div class="col-md-12 form-group">
           <label>@lang('Condition')</label>
           <select class="form--control" name="condition" required>
-            @if ($subcategory->category_id == 8)
+            @if ($ad->subcategory->category_id == 8)
             <option value="3" {{$ad->use_condition == 3?'selected':''}}>@lang('Full Time')</option>
             <option value="4" {{$ad->use_condition == 4?'selected':''}}>@lang('Part Time')</option>
             @else

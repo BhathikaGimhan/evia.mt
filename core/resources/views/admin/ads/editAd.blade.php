@@ -56,8 +56,13 @@
                       <div class="col-md-6 form-group">
                         <label class="font-weight-bold">@lang('Condition')</label>
                         <select class="form-control" name="condition" required>
-                          <option value="2" {{$ad->use_condition == 2?'selected':''}}>@lang('Used')</option>
-                          <option value="1" {{$ad->use_condition == 1?'selected':''}}>@lang('New')</option>
+                            @if ($ad->subcategory->category_id == 8)
+                            <option value="3" {{$ad->use_condition == 3?'selected':''}}>@lang('Full Time')</option>
+                            <option value="4" {{$ad->use_condition == 4?'selected':''}}>@lang('Part Time')</option>
+                            @else
+                            <option value="2" {{$ad->use_condition == 2?'selected':''}}>@lang('Used')</option>
+                            <option value="1" {{$ad->use_condition == 1?'selected':''}}>@lang('New')</option>
+                            @endif
                         </select>
                       </div>
 
