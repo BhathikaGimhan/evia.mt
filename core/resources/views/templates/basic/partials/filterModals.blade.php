@@ -15,22 +15,23 @@
               <a href="javascript:void(0)">
                 <img src="{{getImage('assets/images/location/'.$division->image,'100x100')}}" alt="image" class="select-menu-img">
                 <span>{{$division->name}}</span>
+                <p>test test</p>
               </a>
               <ul class="drop-menu">
                   @foreach ($division->districts as $district)
-                 
+
                   <li>
                     <a href="{{queryBuild('location',$district->slug)}}">
                       <i class="las la-map-marker"></i>
                       <span>{{__($district->name)}}</span>
                     </a>
                   </li>
-               
+
                   @endforeach
               </ul>
             </li>
             @endforeach
-           
+
           </ul>
         </div>
         <div class="modal-footer">
@@ -52,7 +53,7 @@
         <div class="modal-body">
           <ul class="select-menu-list">
             @foreach ($categories as $cat)
-                
+
             <li class="has-drop-menu">
               <a href="javascript:void(0)">
                 <img src="{{getImage('assets/images/category/'.$cat->image)}}" alt="image" class="select-menu-img">
@@ -75,13 +76,13 @@
                   </a>
                   </li>
                  @endif
-                 
+
                   @endforeach
-              
+
               </ul>
             </li>
             @endforeach
-            
+
           </ul>
         </div>
         <div class="modal-footer">
