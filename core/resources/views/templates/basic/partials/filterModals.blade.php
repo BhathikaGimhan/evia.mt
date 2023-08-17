@@ -17,7 +17,7 @@
                 <span>{{$division->name}}</span>
 
               </a>
-              <ul class="drop-menu">
+              <ul class="drop-menu" id="selectLocation">
                 <li>
                     <a href="{{queryBuild('location',$division->slug)}}">
                         <i class="las la-map-marker"></i>
@@ -98,3 +98,12 @@
     </div>
   </div>
  @endif
+<script>
+    $(document).ready(function () {
+        $('#selectLocation').change(function (e) {
+            e.preventDefault();
+            console.log('ok');
+
+        });
+    });
+</script>
